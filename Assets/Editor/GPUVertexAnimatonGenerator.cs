@@ -59,7 +59,7 @@ public class GPUVertexAnimatonGenerator
         if (Directory.Exists(animationFolder))
         {
             FileUtil.DeleteFileOrDirectory(animationFolder);
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(); 
         }
 
         AssetDatabase.CreateFolder(parentFolder, originPrefab.name);
@@ -131,7 +131,7 @@ public class GPUVertexAnimatonGenerator
             info.m_Loop = clip.isLooping;
             info.m_IsDefault = (state == defaultState);
             animInfos.Add(info);
-            var animationSavePath = Path.Combine(subFolder, string.Format("{0}.asset", info.m_AnimName));
+            var animationSavePath = Path.Combine(animationFolder, string.Format("{0}.asset", info.m_AnimName));
             AssetDatabase.CreateAsset(info, animationSavePath);
 
             frameOffset += thisClipFrames;

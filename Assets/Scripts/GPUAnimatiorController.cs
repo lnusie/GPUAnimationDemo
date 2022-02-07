@@ -52,8 +52,6 @@ public class GPUAnimatiorController : MonoBehaviour
             } 
             averageBoundMax = averageBoundMax / m_AnimInfos.Length;
             averageBoundMin = averageBoundMin / m_AnimInfos.Length;
-            Debug.LogError("averageBoundMax >" + averageBoundMax);
-            Debug.LogError("averageBoundMin >" + averageBoundMin);
             m_MaterialPropertyBlock.SetFloat("_BoundMax", averageBoundMax);
             m_MaterialPropertyBlock.SetFloat("_BoundMin", averageBoundMin);
             m_MeshRenderer.SetPropertyBlock(m_MaterialPropertyBlock, 0);

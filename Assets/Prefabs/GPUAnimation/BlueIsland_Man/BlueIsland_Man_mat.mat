@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4108932fd7c9c194ab8fb2a0bd36884f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PosTex:
@@ -32,4 +32,4 @@ Material:
     - _BoundMin: -0.6991911
     - _CurFrameIndex: 0
     m_Colors:
-    - _Color: {r: 0.7960785, g: 0.7960785, b: 0.7960785, a: 1}
+    - _Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
