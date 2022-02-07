@@ -2,3 +2,8 @@ Library/
 Temp/
 Logs/
 Packages/
+.vsconfig
+*.csproj
+.vs/
+GPUAnimationDemo.sln
+obj/
