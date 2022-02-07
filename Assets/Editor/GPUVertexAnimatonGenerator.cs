@@ -48,10 +48,17 @@ public class GPUVertexAnimatonGenerator
         var folderName = "GPUAnimation";
         var parentFolder = Path.Combine(dir, folderName);   //   Assets/Prefab/GPU
         var subFolder = Path.Combine(parentFolder, originPrefab.name);  //   Assets/Prefab/GPU/name
+        var animationFolder = Path.Combine(subFolder, "Animations");  //   Assets/Prefab/GPU/name/Animations
 
         if (Directory.Exists(subFolder))
         {
             FileUtil.DeleteFileOrDirectory(subFolder);
+            AssetDatabase.Refresh();
+        }
+
+        if (Directory.Exists(animationFolder))
+        {
+            FileUtil.DeleteFileOrDirectory(animationFolder);
             AssetDatabase.Refresh();
         }
 
@@ -112,7 +119,8 @@ public class GPUVertexAnimatonGenerator
                 }
             }
 
-            AnimationInfo info = new AnimationInfo();
+
+            AnimationInfo info = AnimationInfo.CreateInstance<AnimationInfo>();
             info.m_AnimFrameOffset = frameOffset+1;
             info.m_TotalFrames = totalFrame;
             info.m_AnimFrameNum = thisClipFrames;
@@ -123,6 +131,8 @@ public class GPUVertexAnimatonGenerator
             info.m_Loop = clip.isLooping;
             info.m_IsDefault = (state == defaultState);
             animInfos.Add(info);
+            var animationSavePath = Path.Combine(subFolder, string.Format("{0}.asset", info.m_AnimName));
+            AssetDatabase.CreateAsset(info, animationSavePath);
 
             frameOffset += thisClipFrames;
         }

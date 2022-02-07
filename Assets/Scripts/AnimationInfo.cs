@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
-public class AnimationInfo
+public class AnimationInfo : ScriptableObject
 {
     public bool m_IsDefault = false;
     public string m_AnimName;

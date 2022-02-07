@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class GPUAnimatiorController : MonoBehaviour
 {
     public AnimationInfo[] m_AnimInfos;
@@ -21,9 +22,6 @@ public class GPUAnimatiorController : MonoBehaviour
 
     private void Start()
     {
-        m_MeshRenderer = GetComponent<MeshRenderer>();
-        m_MaterialPropertyBlock = new MaterialPropertyBlock();
-        m_MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock, 0);
         PlayDefaultAnimation();
     }
 
@@ -42,6 +40,9 @@ public class GPUAnimatiorController : MonoBehaviour
     {
         if (!m_Inited)
         {
+            m_MeshRenderer = GetComponent<MeshRenderer>();
+            m_MaterialPropertyBlock = new MaterialPropertyBlock();
+            m_MeshRenderer.GetPropertyBlock(m_MaterialPropertyBlock, 0);
             float averageBoundMax = 0;
             float averageBoundMin = 0;
             foreach (var info in m_AnimInfos)
@@ -51,6 +52,8 @@ public class GPUAnimatiorController : MonoBehaviour
             } 
             averageBoundMax = averageBoundMax / m_AnimInfos.Length;
             averageBoundMin = averageBoundMin / m_AnimInfos.Length;
+            Debug.LogError("averageBoundMax >" + averageBoundMax);
+            Debug.LogError("averageBoundMin >" + averageBoundMin);
             m_MaterialPropertyBlock.SetFloat("_BoundMax", averageBoundMax);
             m_MaterialPropertyBlock.SetFloat("_BoundMin", averageBoundMin);
             m_MeshRenderer.SetPropertyBlock(m_MaterialPropertyBlock, 0);

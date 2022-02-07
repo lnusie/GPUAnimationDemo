@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd9ea34a0a871e4cb9ac5b9dd76a954, type: 3}
+  m_Name: Dash
+  m_EditorClassIdentifier: 
+  m_IsDefault: 0
+  m_AnimName: Dash
+  m_boundMin: -1.0533867
+  m_boundMax: 1.8406206
+  m_posTex: {fileID: 0}
+  m_Loop: 0
+  m_AnimLength: 0.9333334
+  m_TotalFrames: 197
+  m_AnimFrameNum: 57
+  m_AnimFrameOffset: 141

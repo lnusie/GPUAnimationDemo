@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7631113987426930354
+--- !u!1 &6141296961537865958
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2586952366659618754}
-  m_Layer: 0
-  m_Name: BlueIsland_Man_prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2586952366659618754
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7631113987426930354}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6691524482060446238}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8169591903545070925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6691524482060446238}
-  - component: {fileID: 6871959914889634297}
-  - component: {fileID: 1243480361382701280}
-  - component: {fileID: 5101305027928686444}
+  - component: {fileID: 8084914606926865046}
+  - component: {fileID: 6245102453949541603}
+  - component: {fileID: 7087139368184330235}
+  - component: {fileID: 5515000681500240032}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -50,35 +19,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6691524482060446238
+--- !u!4 &8084914606926865046
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8169591903545070925}
+  m_GameObject: {fileID: 6141296961537865958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2586952366659618754}
+  m_Father: {fileID: 6104917450262350477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6871959914889634297
+--- !u!33 &6245102453949541603
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8169591903545070925}
+  m_GameObject: {fileID: 6141296961537865958}
   m_Mesh: {fileID: 4300000, guid: e34e7619d1240f34288b04d90f51035a, type: 2}
---- !u!23 &1243480361382701280
+--- !u!23 &7087139368184330235
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8169591903545070925}
+  m_GameObject: {fileID: 6141296961537865958}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -111,47 +80,51 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5101305027928686444
+--- !u!114 &5515000681500240032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8169591903545070925}
+  m_GameObject: {fileID: 6141296961537865958}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bc35cc979716b449924bafdb735bd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimInfos:
-  - m_IsDefault: 1
-    m_AnimName: Idle_Eqip_01
-    m_boundMin: -0.6991911
-    m_boundMax: 1.8406206
-    m_posTex: {fileID: 0}
-    m_Loop: 1
-    m_AnimLength: 1
-    m_TotalFrames: 197
-    m_AnimFrameNum: 60
-    m_AnimFrameOffset: 1
-  - m_IsDefault: 0
-    m_AnimName: Attack_01
-    m_boundMin: -0.85405433
-    m_boundMax: 1.8406206
-    m_posTex: {fileID: 0}
-    m_Loop: 0
-    m_AnimLength: 1.3333334
-    m_TotalFrames: 197
-    m_AnimFrameNum: 80
-    m_AnimFrameOffset: 61
-  - m_IsDefault: 0
-    m_AnimName: Dash
-    m_boundMin: -1.0533867
-    m_boundMax: 1.8406206
-    m_posTex: {fileID: 0}
-    m_Loop: 0
-    m_AnimLength: 0.9333334
-    m_TotalFrames: 197
-    m_AnimFrameNum: 57
-    m_AnimFrameOffset: 141
+  - {fileID: 11400000, guid: 36e03f5cf05924f41a4e72e3ee05507e, type: 2}
+  - {fileID: 11400000, guid: c934072b4f330fa429135e399667471e, type: 2}
+  - {fileID: 11400000, guid: 53f2112a6f931d346a5f378506997f2b, type: 2}
   m_Speed: 1
+--- !u!1 &7114078892892318431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6104917450262350477}
+  m_Layer: 0
+  m_Name: BlueIsland_Man_prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6104917450262350477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114078892892318431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8084914606926865046}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
