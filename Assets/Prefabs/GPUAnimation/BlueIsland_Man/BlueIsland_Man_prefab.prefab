@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6141296961537865958
+--- !u!1 &1960843189855525864
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8084914606926865046}
-  - component: {fileID: 6245102453949541603}
-  - component: {fileID: 7087139368184330235}
-  - component: {fileID: 5515000681500240032}
+  - component: {fileID: 5667410040867015703}
+  - component: {fileID: 234280198145393986}
+  - component: {fileID: 3457362883045738533}
+  - component: {fileID: 7379918548868764171}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -19,35 +19,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8084914606926865046
+--- !u!4 &5667410040867015703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6141296961537865958}
+  m_GameObject: {fileID: 1960843189855525864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6104917450262350477}
+  m_Father: {fileID: 8487184491779748944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6245102453949541603
+--- !u!33 &234280198145393986
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6141296961537865958}
+  m_GameObject: {fileID: 1960843189855525864}
   m_Mesh: {fileID: 4300000, guid: e34e7619d1240f34288b04d90f51035a, type: 2}
---- !u!23 &7087139368184330235
+--- !u!23 &3457362883045738533
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6141296961537865958}
+  m_GameObject: {fileID: 1960843189855525864}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -80,24 +80,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5515000681500240032
+--- !u!114 &7379918548868764171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6141296961537865958}
+  m_GameObject: {fileID: 1960843189855525864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bc35cc979716b449924bafdb735bd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimInfos:
-  - {fileID: 11400000, guid: 36e03f5cf05924f41a4e72e3ee05507e, type: 2}
-  - {fileID: 11400000, guid: c934072b4f330fa429135e399667471e, type: 2}
-  - {fileID: 11400000, guid: 53f2112a6f931d346a5f378506997f2b, type: 2}
+  - {fileID: 11400000, guid: 919b63a9df8480045a2010b77747b41f, type: 2}
+  - {fileID: 11400000, guid: 56cd99973822fd84ca2ec3f75bf9726e, type: 2}
+  - {fileID: 11400000, guid: a10d6fb382cce7c47a26d2dfe560cc58, type: 2}
   m_Speed: 1
---- !u!1 &7114078892892318431
+--- !u!1 &3676611199899332604
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6104917450262350477}
+  - component: {fileID: 8487184491779748944}
   m_Layer: 0
   m_Name: BlueIsland_Man_prefab
   m_TagString: Untagged
@@ -113,18 +113,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6104917450262350477
+--- !u!4 &8487184491779748944
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7114078892892318431}
+  m_GameObject: {fileID: 3676611199899332604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8084914606926865046}
+  - {fileID: 5667410040867015703}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -48,17 +48,17 @@ public class GPUVertexAnimatonGenerator
         var folderName = "GPUAnimation";
         var parentFolder = Path.Combine(dir, folderName);   //   Assets/Prefab/GPU
         var subFolder = Path.Combine(parentFolder, originPrefab.name);  //   Assets/Prefab/GPU/name
-        var animationFolder = Path.Combine(subFolder, "Animations");  //   Assets/Prefab/GPU/name/Animations
+        var animationFolder = Path.Combine(subFolder, "AnimationInfos");  //   Assets/Prefab/GPU/name/Animations
 
-        if (Directory.Exists(subFolder))
+        if (!Directory.Exists(subFolder))
         {
-            FileUtil.DeleteFileOrDirectory(subFolder);
+            Directory.CreateDirectory(subFolder);
             AssetDatabase.Refresh();
         }
 
-        if (Directory.Exists(animationFolder))
+        if (!Directory.Exists(animationFolder))
         {
-            FileUtil.DeleteFileOrDirectory(animationFolder);
+            Directory.CreateDirectory(animationFolder);
             AssetDatabase.Refresh(); 
         }
 

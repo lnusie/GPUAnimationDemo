@@ -22,3 +22,5 @@ MonoBehaviour:
   m_TotalFrames: 197
   m_AnimFrameNum: 60
   m_AnimFrameOffset: 1
+  m_AnimationTransformInfos:
+  - {fileID: 0}

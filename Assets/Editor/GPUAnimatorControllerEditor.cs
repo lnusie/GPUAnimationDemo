@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(GPUAnimatiorController))]
+//[CustomEditor(typeof(GPUAnimatiorController))]
 public class GPUAnimatorControllerEditor : Editor
 {
     GPUAnimatiorController controller;
