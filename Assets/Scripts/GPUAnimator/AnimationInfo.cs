@@ -16,6 +16,6 @@ public class AnimationInfo : ScriptableObject
     public int m_TotalFrames = 0;
     public int m_AnimFrameNum = 0;
     public int m_AnimFrameOffset = 0;
-    public AnimationTransformInfo[] m_AnimationTransformInfos;
+    public AnimationTransition[] m_AnimationTransformInfos;
 
 }

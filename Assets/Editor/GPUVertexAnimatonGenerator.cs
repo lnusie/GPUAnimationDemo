@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.Animations;
 using System.IO;
 using Unity.EditorCoroutines.Editor;
 
 public class GPUVertexAnimatonGenerator
 {
+    public static string SaveRootFolder = "Assets/Prefabs/GPUAnimation";
     private static float SampleFactor = 1 / 60f;
-    [MenuItem("Assets/GenGPUVertexAnimaton")]
-    public static void GPUVertexAnimaton()
+    [MenuItem("Assets/GenGPUAnimaton")]
+    public static void GenGPUAnimaton()
     {
         var selector = UnityEditor.Selection.activeObject;
         if(selector == null)
@@ -20,10 +22,30 @@ public class GPUVertexAnimatonGenerator
         EditorCoroutineUtility.StartCoroutineOwnerless(GenThings(selector));
     }
 
+    [MenuItem("Assets/GenAnimatorInfo")]
+    public static void GenAnimatorInfo()
+    {
+        var selector = UnityEditor.Selection.activeObject;
+        if (selector == null)
+        {
+            return;
+        }
+        var prefab = selector as GameObject;
+        if (prefab == null)
+        {
+            return;
+        }
+        var animator = prefab.GetComponent<Animator>();
+        UnityEditor.Animations.AnimatorController animatorController = (UnityEditor.Animations.AnimatorController)animator.runtimeAnimatorController;
+        UnityEditor.Animations.AnimatorStateMachine stateMachine = animatorController.layers[0].stateMachine;
+        var saveFolder = Path.Combine(SaveRootFolder, prefab.name, "AnimatorInfo");  //   Assets/Prefab/GPU/name/AnimatorInfo
+        GenerateAnimatorInfo(stateMachine, saveFolder);
+    }
+
     static IEnumerator GenThings(Object selector)
     {
         var path = AssetDatabase.GetAssetPath(selector);
-        var dir = "Assets/Prefabs";
+        var dir = SaveRootFolder;
         var originPrefab = (GameObject)GameObject.Instantiate(selector);
         originPrefab.name = selector.name;
         var animator = originPrefab.GetComponent<Animator>();
@@ -45,8 +67,7 @@ public class GPUVertexAnimatonGenerator
         }
         modelMesh.uv3 = uvs;
 
-        var folderName = "GPUAnimation";
-        var parentFolder = Path.Combine(dir, folderName);   //   Assets/Prefab/GPU
+        var parentFolder = SaveRootFolder;
         var subFolder = Path.Combine(parentFolder, originPrefab.name);  //   Assets/Prefab/GPU/name
         var animationFolder = Path.Combine(subFolder, "AnimationInfos");  //   Assets/Prefab/GPU/name/Animations
 
@@ -93,6 +114,10 @@ public class GPUVertexAnimatonGenerator
         {
             UnityEditor.Animations.AnimatorState state = stateMachine.states[i].state;
             AnimationClip clip = state.motion as AnimationClip;
+            foreach (var trans in state.transitions)
+            {
+                //trans.destinationState
+            }
             var thisClipFrames = (int)(clip.length / SampleFactor) + 1;
             animator.Play(state.name);
             for (int j = 0; j < thisClipFrames; j++)
@@ -118,7 +143,6 @@ public class GPUVertexAnimatonGenerator
                     pixels.Add(pos);
                 }
             }
-
 
             AnimationInfo info = AnimationInfo.CreateInstance<AnimationInfo>();
             info.m_AnimFrameOffset = frameOffset+1;
@@ -194,5 +218,10 @@ public class GPUVertexAnimatonGenerator
         GameObject.DestroyImmediate(newPrefab);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+    }
+
+    public static void GenerateAnimatorInfo(AnimatorStateMachine stateMachine, string saveFolder)
+    {
+
     }
 }

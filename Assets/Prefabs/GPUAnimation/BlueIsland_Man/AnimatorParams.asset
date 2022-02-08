@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cf40fe2e10a6441b1826609a86c210, type: 3}
+  m_Name: AnimatorParams
+  m_EditorClassIdentifier: 
+  m_TriggerParams:
+  - m_ParamName: Dash
+    m_Value: 0
+  - m_ParamName: Attack
+    m_Value: 0
+  m_BooleanParams: []
+  m_IntParams: []
+  m_FloatParams: []

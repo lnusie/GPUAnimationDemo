@@ -1294,8 +1294,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9049b9201173d354f8b82398487905b3, type: 2}
-  - {fileID: 2100000, guid: fe208080a7b0e6543b1f7de8ad19242c, type: 2}
+  - {fileID: 2100000, guid: 94fd70b474077884e856bea37a7cf22b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2127,6 +2126,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8403537611633354009}
     m_Modifications:
+    - target: {fileID: 100000, guid: e2a8910a6aa20294e8b83f835925bb54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e2a8910a6aa20294e8b83f835925bb54, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2174,6 +2177,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8403537611735578087}
     m_Modifications:
+    - target: {fileID: 100000, guid: 851ef1e3b3356ce4fbafc5bf8e819636, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 851ef1e3b3356ce4fbafc5bf8e819636, type: 3}
       propertyPath: m_RootOrder
       value: 0

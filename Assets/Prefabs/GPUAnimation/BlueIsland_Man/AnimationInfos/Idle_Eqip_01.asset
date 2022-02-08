@@ -23,4 +23,5 @@ MonoBehaviour:
   m_AnimFrameNum: 60
   m_AnimFrameOffset: 1
   m_AnimationTransformInfos:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 21e90daeb5fcf314e8c498e3f74302ef, type: 2}
+  - {fileID: 11400000, guid: d2d0df48f4a0e524da06b5468070d36b, type: 2}

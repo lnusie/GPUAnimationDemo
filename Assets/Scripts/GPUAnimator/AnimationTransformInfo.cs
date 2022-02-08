@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AnimationTransferConditionType
+public enum AnimationTransitionConditionType
 {
     Trigger,
-    Bool,
+    Bool, 
     Int,
     Float
 }
 
-public enum AnimationTransferConditionCompareType
+public enum AnimationTransitionConditionCompareType
 {
     Greater,
     Less,
@@ -20,18 +20,18 @@ public enum AnimationTransferConditionCompareType
 }
 
 [Serializable]
-public class AnimationTransferCondition
+public class AnimationTransitionCondition
 {
-    public AnimationTransferConditionType m_Type;
-    public AnimationTransferConditionCompareType m_CompareType;
-    public string m_FieldName;
+    public AnimationTransitionConditionType m_Type;
+    public AnimationTransitionConditionCompareType m_CompareType;
+    public string m_ParamName;
     public int m_IntValue;
     public float m_FloatValue;
     public bool m_BoolValue;
 }
 
 [CreateAssetMenu]
-public class AnimationTransformInfo : ScriptableObject
+public class AnimationTransition : ScriptableObject
 {
     public AnimationInfo m_AnimInfo0;
     public AnimationInfo m_AnimInfo1;
@@ -39,6 +39,6 @@ public class AnimationTransformInfo : ScriptableObject
     public int m_StartFrame; //从Anim0的N帧开始融合
     public int m_BlendFrame;  //融合帧数
 
-    public AnimationTransferCondition[] m_Conditions;
+    public AnimationTransitionCondition[] m_Conditions;
 
 }
