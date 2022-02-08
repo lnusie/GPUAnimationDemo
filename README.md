@@ -2,10 +2,10 @@
 Unity 多人同屏技术测试Demo
 
 **已实现内容**  
-1.Animation转动画贴图烘焙工具
+1.Animation转动画贴图烘焙工具  
 2.基础的顶点动画Shader  
 3.实现全新的一套Animator以实现动画切换、动画融合等功能。  
-4.应用GPU Instancing技术 
+4.应用GPU Instancing技术  
 
 
 **测试效果**
